@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "924119896622",
+    "project_id": "biye-ef236",
+    "storage_bucket": "biye-ef236.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924119896622:android:6939650fa81d373ca8c5bf",
+        "android_client_info": {
+          "package_name": "com.example.biye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924119896622-o618f5f4l3m2ldhahfjdtnmvn8eoi9um.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuBwH9hCxWAQyo9MzrjGj6-ptxEF716PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924119896622-o618f5f4l3m2ldhahfjdtnmvn8eoi9um.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

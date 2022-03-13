@@ -1,13 +1,17 @@
-import 'package:deneme/colors.dart';
-import 'package:deneme/loginpage.dart';
+import 'package:biye/colors.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'mainpage_main.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: "LoginPage",
       theme:
           ThemeData(primaryColor: customColor1, primarySwatch: Colors.orange),
-      home: const LoginPage(),
+      home: MainPageMain(),
     );
   }
 }

@@ -1,37 +1,17 @@
 import "package:flutter/material.dart";
 import 'colors.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class ShopPage extends StatefulWidget {
+  const ShopPage({Key key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _ShopPageState createState() => _ShopPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        //Navigation Bar
-        currentIndex: 0,
-        backgroundColor: customColor4,
-        elevation: 10,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search_rounded),
-            label: 'Ürünler',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Sepet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Profil',
-          ),
-        ],
-      ),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: customColor4,
@@ -39,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Icon(Icons.location_on),
-            Container(
+            const SizedBox(
               width: 10,
             ),
             const Text("İş - (İstanbul - Beyoğlu)", // Adress Bar
@@ -51,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.grey[100],
       body: SizedBox(
-        height: 1600,
+        height: MediaQuery.of(context).size.height,
         child: ListView(
           children: [
             maps(context),
@@ -70,6 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                         category("Fit", false),
                         category("Pizza", false),
                         category("Çiğköfte", false),
+                        category("Ev Yemeği", false)
                       ],
                     ),
                   ),
@@ -270,7 +251,7 @@ class _LoginPageState extends State<LoginPage> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Image.asset(
-                  "assets/$photo.jpg",
+                  "assets/jpgs/$photo.jpg",
                   fit: BoxFit.cover,
                 ),
               ),
@@ -328,9 +309,9 @@ class _LoginPageState extends State<LoginPage> {
   Container maps(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.25,
-      color: Colors.blueGrey,
+      color: Colors.transparent,
       child: Image.asset(
-        "maps.png",
+        "assets/pngs/maps.png",
         fit: BoxFit.fitWidth,
       ),
     );
