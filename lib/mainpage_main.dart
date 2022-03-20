@@ -1,6 +1,6 @@
 import 'package:biye/cart.dart';
 import 'package:biye/colors.dart';
-import 'package:biye/Profil/login.dart';
+import 'package:biye/profile/login.dart';
 import 'package:biye/shop.dart';
 import 'package:biye/userpage.dart';
 import "package:flutter/material.dart";
